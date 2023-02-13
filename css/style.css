@@ -1,0 +1,316 @@
+@charset "UTF-8";
+
+body {
+ color: #252525;
+ font-family: 'Heebo', 'Roboto', Arial,Helvetica,sans-serif;
+ font-size: 14px;
+
+}
+
+/* reset for pc */
+.mobile {display: none !important;}
+
+
+/* ----------------------  */
+/* main                   */
+/* --------------------- */
+
+#wrapper {overflow: hidden;}
+/* 본문 바로가기 */
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; z-index: 100000; line-height: 40px; text-align: center; background-color: rgba(0,0,0,0.6); color: #fff; font-size: 16px; transition: top 0.3s;}
+#skip-nav:focus {top: 0;}
+
+/* header bar */
+.header-bar {width: 100%; height: 50px; background-color: #dc1f18; color: #fff; text-align: center; line-height: 50px; font-size: 14px; position: absolute; top: 0; z-index: 10000;}
+.header-bar.on {top: -50px;}
+
+/* header.on*/
+#header.on {background-color: #fff; position: absolute;top: 50px; z-index: 10000; width: 100%; height: 100px; color: #000;}
+#header.on div.header-top {background-color: #fff; max-width: 1350px; height: 60px;  margin: 0 auto; position: relative;}
+#header.on div.header-top h1 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 158px; height: 20px; line-height: 20px;}
+#header div.header-top h1 img {position: absolute; top: 40%; transform: translate(0, -40%);}
+#header div.header-top h1 img.white {display: block;}
+#header div.header-top h1 img.black {display: none;}
+#header.on div.header-top h1 img.white {display: none;}
+#header.on div.header-top h1 img.black {display: block;}
+#header.on div.header-top ul.header-nav-left {position: absolute; top: 50%; left: 20px; transform: translate(0, -50%);}
+#header.on div.header-top ul.header-nav-left li {float: left; margin-right: 20px;}
+#header.on div.header-top ul.header-nav-left li a {display: block; font-size: 15px;}
+#header.on div.header-top ul.header-nav-right {position: absolute; top: 50%; right: 50px; transform: translate(0, -50%);}
+#header.on div.header-top ul.header-nav-left li {float: left; margin-right: 20px;}
+#header.on div.header-top ul.header-nav-left li a {display: block; font-size: 15px;}
+#header.on div.header-top ul.header-nav-right {position: absolute; top: 50%; right: 50px; transform: translate(0, -50%);}
+#header.on div.header-top ul.header-nav-left li:hover a {color: #dc1f18;}
+#header.on div.header-top ul.header-nav-right li {float: left;}
+#header.on div.header-top ul.header-nav-right a {display: block; font-size: 15px; padding-left: 40px;}
+header.on div.header-top ul.header-nav-right li:first-child a {padding-right: 40px;}
+header.on div.header-top ul.header-nav-right li:first-child a i {padding-right: 10px;}
+#header.on div.header-top ul.header-nav-right li:hover a {color: #dc1f18;}
+#header.on .header-bottom {height: 70px;  margin: 0 auto; position: relative;  background-color: #fff;}
+#header.on .header-bottom > ul {position: relative; top: 50%; width: 310px; margin: 0 auto;}
+#header.on .header-bottom > ul > li {float: left; margin-right: 20px;}
+#header.on .header-bottom > ul > li a {font-size: 14px;}
+#header.on .header-bottom > ul > li.on div.sub-nav-container {height: 650px;}
+
+/* header */
+#header {background-color: transparent; position: absolute; top: 50px; z-index: 10000; width: 100%; height: 100px; color: #fff;}
+#header div.header-top {background-color: transparent; max-width: 1350px; height: 60px;  margin: 0 auto; position: relative;}
+#header div.header-top h1 {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 158px; height: 20px; line-height: 20px;}
+#header div.header-top ul.header-nav-left {position: absolute; top: 50%; left: 20px; transform: translate(0, -50%);}
+#header div.header-top ul.header-nav-left li {float: left; margin-right: 20px;}
+#header div.header-top ul.header-nav-left li a {display: block; font-size: 15px;}
+#header div.header-top ul.header-nav-right {position: absolute; top: 50%; right: 50px; transform: translate(0, -50%);}
+#header div.header-top ul.header-nav-left li:hover a {color: #dc1f18;}
+#header div.header-top ul.header-nav-right li {float: left;}
+#header div.header-top ul.header-nav-right a {display: block; font-size: 15px; padding-left: 40px;}
+#header div.header-top ul.header-nav-right li:first-child a {padding-right: 40px;}
+#header div.header-top ul.header-nav-right li:first-child a i {padding-right: 10px;}
+#header div.header-top ul.header-nav-right li:hover a {color: #dc1f18;}
+
+#header .header-bottom {height: 70px;  margin: 0 auto; position: relative;  background-color: transparent;}
+#header .header-bottom > ul {position: relative; top: 50%; width: 310px; margin: 0 auto;}
+#header .header-bottom > ul > li {float: left; margin-right: 20px;}
+#header .header-bottom > ul > li a {font-size: 14px;}
+#header .header-bottom > ul > li a:hover {color: #dc1f18;}
+#header .header-bottom div.sub-nav-container {position: fixed; left: 0; width: 100vw; height: 0; background-color: #fff; color: #000; display: flex; overflow: hidden;}
+#header .header-bottom div.sub-nav-container ul li a.red {color: #dc1f18; font-weight: 700;}
+#header .header-bottom div.sub-nav-container div.left {background-color: #f1efef; flex-grow: 1;}
+#header .header-bottom div.sub-nav-container div.left ul {}
+#header .header-bottom div.sub-nav-container div.left ul li {margin: 30px;}
+#header .header-bottom div.sub-nav-container div.left ul li a {display: block; font-size: 18px;}
+
+#header .header-bottom div.sub-nav-container div.center {flex-grow: 2; margin: 30px;}
+#header .header-bottom div.sub-nav-container div.center ul {float: left;}
+#header .header-bottom div.sub-nav-container div.center ul li {}
+#header .header-bottom div.sub-nav-container div.center ul li a {display: block; font-size: 18px; padding: 20px 100px 10px 10px;}
+
+#header .header-bottom div.sub-nav-container div.right {flex-grow: 2;}
+#header .header-bottom div.sub-nav-container div.right img {width: 400px; margin-top: 40px;}
+#header .header-bottom div.sub-nav-container div.right p {font-size: 15px; margin: 10px 0;}
+
+/* main */
+#main {}
+#main-visual {width: 100%; height: 800px; background-color: lightsteelblue; position: relative;}
+#main-visual video {width: 100%; height: 100%; object-fit: cover;}
+#main-visual em {position: absolute; top: 70%; left: 20px; color: #fff; font-size: 40px; font-weight: 700;} 
+#main-visual .dw-btn {position: absolute; bottom: 15%; left: 20px; font-size: 13px; min-width: 11em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+
+/* main_man_watch  */
+#main_man_watch {max-width: 1280px; margin: 0 auto; margin-top: 40px; padding-left: 20px; padding-right: 20px;}
+#main_man_watch section {padding: 50px 50px; box-sizing: border-box;}
+#main_man_watch section ul {display: grid; grid-template-columns: 50% 25% 25%; gap: 20px;}
+#main_man_watch section ul li:first-child {grid-row: 1 / 3;}
+#main_man_watch section ul li:first-child a {position: relative; display: block; height: 100%;}
+#main_man_watch section ul li:first-child img {width: 100%; height: 100%;} 
+#main_man_watch section ul li:first-child a p {position: absolute; top: 60px; left: 50%; transform: translate(-50%, 0); color: #fff; font-size: 33px; font-weight: 300; font-family: 'heebo';}
+
+#main_man_watch section ul li:first-child a .dw-btn {display: inline-block; position: absolute; top: 120px; left: 50%; transform: translate(-50%, 0);  font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; text-align: center; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+#main_man_watch section ul li + li em {display: block; text-align: center; font-size: 14px; font-weight: 700; margin-top: 20px; margin-bottom: 5px;}
+#main_man_watch section ul li + li span {display: block; font-size: 13px; text-align: center; margin-bottom: 10px;}
+#main_man_watch section ul li + li span + span {display: block; font-size: 15px; font-weight: 400;}
+
+/* main_woman_watch */
+#main_woman_watch {max-width: 1280px; margin: 0 auto; padding-left: 20px; padding-right: 20px;}
+#main_woman_watch section {padding: 50px 50px;}
+#main_woman_watch section ul {display: grid; grid-template-columns: 25% 25% 50%; gap: 20px;}
+#main_woman_watch section ul li:first-child {grid-column: 3 / 4; grid-row: 1 / 3;}
+#main_woman_watch section ul li:first-child a {position: relative; display: block; height: 100%;}
+#main_woman_watch section ul li:first-child img {width: 100%; height: 100%;} 
+#main_woman_watch section ul li:first-child a p {position: absolute; top: 60px; left: 50%; transform: translate(-50%, 0); font-size: 33px; font-weight: 100; font-weight: 300; font-family: 'heebo';}
+#main_woman_watch section ul li:first-child a .dw-btn {display: inline-block; position: absolute; top: 120px; left: 50%; transform: translate(-50%, 0);  font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; text-align: center; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+#main_woman_watch section ul li + li em {display: block; text-align: center; font-size: 14px; font-weight: 700; margin-top: 20px; margin-bottom: 5px;}
+#main_woman_watch section ul li + li span {display: block; font-size: 13px; text-align: center; margin-bottom: 10px;}
+#main_woman_watch section ul li + li span + span {display: block; font-size: 15px; font-weight: 400;}
+
+/* main-category */
+#main-category {max-width: 1280px; margin: 0 auto; padding-left: 20px; padding-right: 20px;}
+#main-category h3 {text-align: center; font-size: 33px; font-weight: 100; margin-bottom: 40px;}
+#main-category ul {display: flex; flex-wrap: wrap; justify-content: space-between;}
+#main-category ul li  {width: calc(16.6666% - 4.1666px);}
+#main-category ul li a {display: block; overflow: hidden;}
+#main-category ul li a img {transition: all 0.3s;}
+#main-category ul li a em {display: block; text-align: center; margin-bottom: 20px; font-size: 18px;}
+#main-category ul li a:hover em {color: #dc1f18;}
+#main-category ul li a:hover img {transform: scale(1.03);}
+
+/* main-content */
+#main-content {max-width: 1280px; margin: 0 auto; padding-left: 20px; padding-right: 20px;}
+#main div.container > ul > li {display: flex; padding: 40px 0; box-sizing: border-box; align-items: center;}
+#main div.container > ul > li > div.text-box {width: 50%; margin-right: 80px;}
+#main div.container > ul > li > img {width: 619px; height: auto; width: 50%;}
+
+#main div.container > ul > li.reverse {flex-direction: row-reverse;}
+#main div.container > ul > li.reverse > div.text-box {width: 50%; margin-left: 80px; margin-right: 0;}
+#main div.container > ul > li.reverse > img {width: 662px; height: auto; width: 50%;}
+ 
+#main div.container > ul > li > div.text-box > em {display: block; color: #000; font-family: 'Heebo'; font-size: 34px; font-weight: 400; text-transform: uppercase; margin-bottom: 20px;}
+#main div.container > ul > li > div.text-box > p {color: #252525; font-family: 'Heebo'; font-size: 18px; font-weight: 300px; font-weight: 300; line-height: 30px;}
+#main div.container > ul > li > div.text-box > .dw-btn {display: inline-block; font-size: 12px; min-width: 9em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; text-align: center; line-height: calc(3.4em - 2px); margin-top: 20px; appearance: none; border: none; cursor: pointer;}
+
+/* new product */
+#new-product {max-width: 1280px; margin: 0 auto; position: relative;}
+#new-product h3 {text-align: center; font-size: 33px; font-weight: 100; margin-bottom: 40px;}
+#new-product div.new-product-container {overflow: hidden; margin-bottom: 80px;}
+#new-product .new-product-container div.box {position: relative; overflow: hidden;}
+#new-product .new-product-container ul.slide {position: relative; overflow: hidden; width: 5000px;}
+#new-product .new-product-container ul.slide li {float: left; padding-right: 5px; box-sizing: border-box;}
+#new-product .new-product-container ul.slide li a div.img-bg {background-color: #f6f6f6; width: 321px; height: 321px; position: relative;}
+#new-product .new-product-container ul.slide li a div.img-bg img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#new-product .new-product-container ul.slide li a em {display: block; font-size: 18px; font-weight: 700; margin-top: 20px; margin-bottom: 5px; text-align: center;}
+#new-product .new-product-container ul.slide li a span {display: block; font-size: 13px; margin-bottom: 10px; text-align: center;}
+#new-product .new-product-container ul.slide li a span + span {display: block; font-size: 15px; font-weight: 400;}
+#new-product .new-product-container ul.slide li a:hover {color: #dc1f18;}
+
+#new-product p.control a i span {text-indent: -999px;}
+#new-product p.control a i {color: #fff; top: 25%; left: 35%;}
+#new-product p.control a.prev{display: block; background-color: #dc1f18; border-radius: 50%; height: 36px; overflow: hidden; top: 36%; transform: translate(0, -38%); width: 36px; position: absolute; left: 0;}
+#new-product p.control a.next{display: block; background-color: #dc1f18; border-radius: 50%; height: 36px; overflow: hidden; top: 36%; transform: translate(0, -38%); width: 36px; position: absolute; right: 0;} 
+
+#new-product > .dw-btn {display: block; position: relative; margin: 0 auto;  text-align: center; font-size: 12px; min-width: 9em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; text-align: center; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+/* main-news */
+#main-news {max-width: 1280px; margin: 0 auto; position: relative;}
+#main-news h3 {text-align: center; font-size: 33px; font-weight: 100; margin-bottom: 40px;}
+#main-news ul::after {content: ''; display: block; clear: both;}
+#main-news ul li {float: left; width: calc(24% - 3.5px);}
+#main-news ul li a em {display: block; font-size: 16px; font-weight: 700; margin-top: 30px;}
+#main-news ul li a span {color: #252525; font-size: 16px; font-weight: 300;}
+#main-news ul li + li {margin-left: 10px;}
+#main-news ul li p {color: #252525; font-size: 18px; font-weight: 300; margin-top: 20px; line-height: 1.2em; max-height: 3.6em; -webkit-line-clamp: 3; -webkit-box-orient: vertical; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; white-space: pre-wrap;}
+#main-news ul li a:hover em {color: #dc1f18;}
+#main-news .dw-btn {display: block; position: relative; margin: 0 auto; margin-top: 50px; text-align: center; font-size: 12px; min-width: 12em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; text-align: center; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+/* prefooter */
+#prefooter {}
+#prefooter ul {display: flex;}
+#prefooter ul li.prefooter-left {position: relative;}
+#prefooter ul li.prefooter-left div.prefooter-text-box {display: block; overflow: hidden;}
+#prefooter ul li.prefooter-left div.prefooter-text-box em {position: absolute; top: 40%; left: 50%; transform: translate(-50%, -40%); font-size: 40px; font-weight: 300; letter-spacing: 1px;}
+#prefooter ul li.prefooter-left div.prefooter-text-box .dw-btn {position: absolute; top: 60%; left: 50%; transform: translate(-50%, -60%); font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+#prefooter {margin-top: 50px;}
+#prefooter ul li.prefooter-right {position: relative;}
+#prefooter ul li.prefooter-right div.prefooter-text-box {display: block; overflow: hidden;}
+#prefooter ul li.prefooter-right div.prefooter-text-box em {position: absolute; top: 40%; left: 50%; transform: translate(-50%, -40%); font-size: 40px; font-weight: 300; color: #fff; letter-spacing: 1px;}
+#prefooter ul li.prefooter-right div.prefooter-text-box .dw-btn {position: absolute; top: 60%; left: 50%; transform: translate(-50%, -60%); font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+
+/* footer */
+#footer {width: 100%;}
+#footer div.newsletter-banner {width: 100%; height: 250px; background-color: #4f4f4f; display: block; padding: 40px 15px; text-align: center;}
+#footer div.newsletter-banner h2 {font-size: 40px; font-weight: 300; color: #fff; margin-bottom: 20px;}
+#footer div.newsletter-banner div.banner-content {margin-left: auto;
+margin-right: auto; max-width: 750px;}
+#footer div.newsletter-banner div.banner-content p {color: #fff; margin-bottom: 30px;}
+#footer div.newsletter-banner div.banner-content .email-box form {position: relative;
+max-width: 600px; height: 60px; margin: 0 auto; text-align: center;}
+#footer div.newsletter-banner div.banner-content .email-box label {position: absolute; left: 20px; top: 52%; transform: translate(0, -50%); font-size: 15px; font-weight: 300; color: #252525;}
+#footer div.newsletter-banner div.banner-content .email-box input {width: 600px; height: 56px; padding: 10px 20px; font-size: 16px; border: 1px solid rgba(0,0,0,.2); background: #fff; box-sizing: border-box; margin-top: 30px; padding: 0 10px 0 10px; left: 20px; top: 52%; transform: translate(-20px, -50%);}
+#footer div.newsletter-banner div.banner-content .email-box button {width: 150px; height: 56px; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); border: none; font-size: 15px; color: #fff; padding: 0 10px 0 10px; position: absolute; right: -130px; top: 50%; transform: translate(0, -50%); cursor: pointer;}
+
+#footer div.footer-bottom {width: 100%; background-color: #000;}
+#footer div.footer-bottom h1 {text-align: center; padding: 30px 0;}
+#footer div.footer-bottom h1 a img {margin-bottom: 50px;}
+#footer div.footer-bottom div.footer-bottom-container {max-width: 1280px; margin: 0 auto; text-align: center;}
+#footer div.footer-bottom div.footer-bottom-container div.footer-bottom-col {width: 25%; float: left;}
+#footer div.footer-bottom div.footer-bottom-container::after {display: block; content: ''; clear: both;}
+#footer div.footer-bottom div.footer-bottom-container div.footer-bottom-col h3 {font-weight: 700;  font-size: 18px; padding-bottom: 70px; color: #fff;}
+#footer div.footer-bottom div.footer-bottom-container div.footer-bottom-col li {font-size: 12px; color: #fff; padding-top: 25px;}
+#footer div.footer-bottom > div.footer-bottom-text {text-align: center; color: #eae8e7; font-size: 10px; margin-top: 60px; padding: 30px 0; line-height: 17px;}
+
+#main_woman_watch ~ section {margin-top: 70px;}
+
+/* module */
+.dw-btn {font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+.dw-btn:hover {opacity: 0.9;}
+ 
+
+/* --------------------------  */
+/* sub-1 (service)             */
+/* --------------------------  */
+.service-header-bar {width: 100%; height: 50px; background-color: #dc1f18; color: #fff; text-align: center; line-height: 50px; font-size: 14px; position: fixed; top: 0; z-index: 100000;}
+#header.service-header {color: #000; border-bottom: 1px solid #d5d5d5; height: 150px; background-color: #fff; position: fixed; top: 50px; z-index: 1000000;}
+#main.main-service {padding-top: 250px; max-width: 1300px; margin: 0 auto;}
+#bread-crumb li {display: inline-block; margin-top: 30px;}
+#bread-crumb li + li::before {content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 700; margin: 0 10px; color: #dc1f18;}
+#main-service-title {margin: 40px 0 30px 0; text-align: center; font-family: 'Heebo','Roboto',Arial,Helvetica,sans-serif;}
+#main-service-title h3 {font-size: 40px; padding-bottom: 30px;}
+#main-service-title em {font-size: 40px; font-weight: 300; padding-bottom: 20px; display: inline-block;}
+#main-service-title p {font-size: 16px; font-weight: 500; letter-spacing: 2px;}
+
+#main-service-contents-top div.text-box p em {color: #E32119;}
+#main-service-contents-middle {border: 2px solid #f6f6f6; background-color: #fff; padding: 10px;}
+#main-service-contents-middle div.container {padding: 0 50px 0 0;}
+#main-service-contents-middle div.container > ul {width: 100%; display: flex; justify-content: end;align-items: flex-start;}
+#main-service-contents-middle div.container > ul > li {width: 25%; padding-left: 20px;}
+#main-service-contents-middle div.container > ul > li > div {}
+#main-service-contents-middle div.container > ul > li > div > img {display: block;}
+#main-service-contents-middle div.container > ul > li > div > em {display: block; border-bottom: 1px solid #dc1f18; color: #252525; font-weight: 300; margin-top: 20px; font-size: 18px;}
+#main-service-contents-middle div.container > ul > li > div > p {color: #252525; font-weight: 300; margin-top: 20px; font-size: 16px; margin-top: 20px;}
+#main-service-contents-middle div.container > ul > li > div > a {display: inline-block; color: #dc1f18; font-size: 12px; margin-top: 20px;}
+#main-service-contents-middle div.container > ul > li > div > a > i {font-family: 'Font Awesome 6 Free'; font-size: 12px; padding-right: 10px;}
+#main-service-contents-middle div.service-table {max-width: 1200px; margin: 0 auto;}
+
+#customers {border-collapse: collapse; width: 100%; margin-top: 40px;}
+#customers .row_header {width: 25%;}
+#customers td, #customers th {padding: 15px; text-align: center;}
+#customers tr td:first-child {text-align: right; color: #757575; font-weight: 500; font-size: 14px;}
+#customers tr:last-child td {font-weight: 700;}
+#customers tr:nth-child(odd){background-color: #f2f2f2;}
+#customers tr:nth-child(10){border-top: 1px solid #dc1f18 !important; border-bottom: 1px solid #dc1f18 !important;}
+#customers th {padding-top: 12px; padding-bottom: 12px; text-align: left; color: white;}
+#customers tr td .fa-xmark {color: #dc1f18;}
+#customers tr td.check-icon {background: url(../img/icon/table-icon.webp) left 25% center no-repeat;}
+
+
+
+/* --------------------------  */
+/* sub-2 (strap)             */
+/* --------------------------  */
+.strap-header-bar {width: 100%; height: 50px; background-color: #dc1f18; color: #fff; text-align: center; line-height: 50px; font-size: 14px; position: fixed; top: 0;}
+#header.strap-header{color: #000; border-bottom: 1px solid #d5d5d5; background-color: #fff; height: 190px; position: fixed; top: 50px;}
+.strap-bar {max-width: 1300px; margin: 0 auto; display: flex;} 
+.strap-bar h1 {display: inline-block; margin-right: auto; font-size: 21px; font-weight: 500; line-height: 21px; line-height: 2em;}
+.strap-bar .dw-btn {font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+#strap-hero {width: 100%; height: 600px; background: url(../img/main_strap.webp)center center no-repeat; background-size: cover; margin-top: 230px; position: relative;}
+#strap-hero div.strap-forms-container {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 500px; display: flex; background: rgba(0,0,0,.7); align-items: start; justify-content: center; overflow: hidden;}
+#strap-hero div.strap-forms-container div.strap-forms-text {text-align: center; color: #fff; padding: 40px;}
+#strap-hero div.strap-forms-container div.strap-forms-text div > * {display: block;}
+#strap-hero div.strap-forms-container div.strap-forms-text h3 {font-size: 35px; margin-bottom: 30px; font-weight: 400;}
+#strap-hero div.strap-forms-container div.strap-forms-text div {width: 80%; margin: 0 auto;}
+#strap-hero div.strap-forms-container div.strap-forms-text div .dw-btn {width: 100%;}
+#strap-hero div.strap-forms-container div.strap-forms-text div label {text-align: left; font-size: 12px; margin-bottom: 5px;}
+#strap-hero div.strap-forms-container div.strap-forms-text div input {font-size: 12px; height: 56px; width: 100%; padding: 0 2em; border-radius: 0.1em; background: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer; margin-bottom: 10px;}
+#strap-hero div.strap-forms-container div.strap-forms-text div span {margin: 30px 0; font-size: 30px; font-weight: 300; position: relative; display: inline-block;}
+#strap-hero div.strap-forms-container div.strap-forms-text div span::before {content: ""; width: 250px;  height: 1px; position: absolute; right: calc(100% + 20px); top: 50%; transform: translate(0, -50%); background-color: rgba(255,255,255,0.3);}
+#strap-hero div.strap-forms-container div.strap-forms-text div span::after {content: ""; width: 250px;  height: 1px; position: absolute; left: calc(100% + 20px); top: 50%; transform: translate(0, -50%); background-color: rgba(255,255,255,0.3);}
+#strap-hero div.strap-forms-container div.strap-forms-text div .dw-btn-white {background-color: #000; border: 1px solid #fff; color: #fff; border-radius: 3px; width: 40%; height: 40px; font-size: 12px; margin: 20px auto; cursor: pointer; transition: all 0.4;} 
+#strap-hero div.strap-forms-container div.strap-forms-text div .dw-btn-white:hover {background-color: #fff; color: #000;}
+
+
+#strap-new {text-align: center; max-width: 1300px; margin: 0 auto; margin-top: 70px;}
+#strap-new div.strap-new-text h2 {font-size: 55px; font-weight: 300; margin-bottom: 20px;}
+#strap-new div.strap-new-text p.strap__description {font-size: 18px; line-height: 1.6667; letter-spacing: .333px; margin-top: 10px;}
+#strap-new div.strap-slide {position: relative; margin-top: 60px;}
+#strap-new div.strap-slide div.box p.dummy img {opacity: 0;}
+#strap-new div.strap-slide div.box ul.slide {}
+#strap-new div.strap-slide div.box ul.slide li {position: absolute; top: 0; left: 0; display: none;}
+#strap-new div.strap-slide div.box ul.slide li.on {display: block;}
+#strap-new div.strap-slide div.box ul.slide li img {position: relative;}
+#strap-new div.strap-slide div.box ul.slide li div.strap-slide-text {position: absolute; top: 75%; left: 50%; transform: translate(-50%, 0); color: #fff; text-align: center; width: 95%; }
+#strap-new div.strap-slide div.box ul.slide li div.strap-slide-text p {font-size: 57px; margin: 0 0 25px; letter-spacing: 1px; font-weight: 300;}
+#strap-new div.strap-slide div.box ul.slide li div.strap-slide-text span {font-size: 18px; line-height: 1.6;}
+
+#strap-new div.strap-slide p.control {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 1300px; max-width: 100vw;}
+#strap-new div.strap-slide p.control a {position: absolute; top: 50%; transform: translate(0, -50%); width: 20px; height: 40px; overflow: hidden; text-indent: -9999px;}
+#strap-new div.strap-slide p.control a.prev {left: 50px; background: url(../img/icon/icon-left-white.png) center center no-repeat;}
+#strap-new div.strap-slide p.control a.next {right: 50px;  background: url(../img/icon/icon-right-white.png) center center no-repeat;}
+
+#strap-contents {max-width: 1300px; margin: 0 auto;}
+#strap-contents div.container ul li:nth-child(2) {padding: 0;}
+#strap-contents div.container ul li div.text-box {text-align: center;}
+#strap-contents div.container ul li div.text-box em {font-size: 57px; font-weight: 300;}
+#strap-contents div.container ul li div.text-box p {font-size: 18px; font-weight: 400; margin-bottom: 20px;}

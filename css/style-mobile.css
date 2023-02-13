@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+body {
+  color: #252525;
+  font-family: 'Heebo', 'Roboto', Arial,Helvetica,sans-serif;
+  font-size: 14px;
+ }
+
+/* reset for mobile */
+.pc {display: none !important;}
+
+
+/* ----------------------  */
+/* main                   */
+/* --------------------- */
+#wrapper {overflow: hidden;}
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.6); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
+#skip-nav:focus {top: 0;}
+
+.header-bar {width: 100%; height: 50px; background-color: #dc1f18; color: #fff; text-align: center; line-height: 50px; font-size: 14px; position: absolute; top: 0; left: 0; z-index: 10000000;}
+#header {position: relative; left: 0; top: 50px; width: 100%; height: 160px; background-color: #fff; border-bottom: 1px solid #252525; z-index: 10000000;}
+#header.on {top: 0; height: auto; padding-top: 30px;} 
+#header h1 a img.mobile {position: absolute; left: 50%; top: 20px; transform: translate(-50%, 0); width: 154px; height: 20px;}
+
+/* side-header */
+nav.header-bottom {position: relative; left: -100%;}
+#header.on nav.header-bottom {left: 0;}
+.header-bottom div.container {position: fixed; top: 0; left: -100%; width: 100%; height: 100%; background-color: #fff; transition: left 0.2s;}
+#header.on .header-bottom div.container {left: 0;}
+.header-bottom a img {position: relative; top: 0; left: 50%; transform: translate(-50%, 0); width: 170px; height: auto;}
+
+.header-bottom span.headerclose-m {position: relative;}
+.header-bottom  span.headerclose-m a {display: block; width: 25px; height: 25px; position: relative; left: 20px; top: -10px; transform: translate(0, -50%);}
+.header-bottom > ul {position: relative; padding: 10px 0 0 20px;}
+.header-bottom > ul > li {margin: 20px 0;}
+.header-bottom > ul > li > a {display: block; position: relative; height: 100%; line-height: 23px; font-size: 23px; margin-bottom: 30px;}
+.header-bottom > ul > li > a:hover {color: #dc1f18;}
+.header-bottom > ul > li > a > i {position: absolute; right: 20px; line-height: 20px;}
+.header-bottom > ul > li.on > a > i {transform: rotate(180deg);}
+.sub-nav-container div ul li {height: 0; overflow: hidden;  transition: height 0.3s;}
+#header.on .header-bottom ul li.on .sub-nav-container div ul li {height: auto;}
+.sub-nav-container div ul li a {display: block; font-size: 17px; padding: 10px 5px;}
+.sub-nav-container div ul li a.red {display: block; color: #dc1f18; font-weight: 700; border-bottom: 1px solid #d5d4d4;}
+
+
+/* 햄버거 버튼 */
+#header a.menu {position: absolute; left: 20px; top: 20px; width: 25px; height: 17px;}
+#header a.menu::before {content: ''; position: absolute; left: 50%; top: 0; transform: translate(-50%, 0); width: 100%; height: 2px; background-color: #000; transition: all 0.3s;}
+#header a.menu::after {content: ''; position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0); width: 100%; height: 2px; background-color: #000; transition: all 0.3s;}
+#header a.menu span {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 2px; background-color: #000; overflow: hidden; text-indent: -999px; transition: all 0.3s;}
+
+/* 찾아보기 */
+#header .open-search {border: 1px solid #252525; color: #252525; width: 90%;line-height: 40px; display: block; margin: 0 auto; position: absolute; top: 59%; left: 20px; transform: translate(0,-50%); padding-left: 40px;}
+#header .open-search-st {border: 1px solid #252525; color: #252525; width: 90%;line-height: 40px; display: block; margin: 0 auto; position: absolute; top: 52%; left: 20px; transform: translate(0,-50%); padding-left: 40px;}
+#header .open-search > i {position: absolute; left: 10px; top: 50%; transform: translate(0, -50%); font-size: 1.3em; color: #252525;}
+#header .open-search-st > i {position: absolute; left: 10px; top: 50%; transform: translate(0, -50%); font-size: 1.3em; color: #252525;}
+
+
+/* main */
+#main-visual {width: 100%; height: 800px; position: relative;}
+#main-visual video {width: 100%; height: 100%; object-fit: cover;}
+#main-visual em {position: absolute; top: 70%; left: 20px; color: #fff; font-size: 24px; font-weight: 700;} 
+#main-visual .dw-btn {position: absolute; bottom: 16%; left: 20px; font-size: 12px; min-width: 10em; height: 3em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+/* main_man_watch  */
+#main_man_watch {margin-top: 40px;}
+#main_man_watch section ul {display: grid; justify-items: center;}
+#main_man_watch section ul li:first-child {grid-column: 1 / 3;}
+#main_man_watch section ul li:first-child a {position: relative; display: block; height: 100%;}
+#main_man_watch section ul li:nth-child(2) img,
+#main_man_watch section ul li:nth-child(3) img,
+#main_man_watch section ul li:nth-child(4) img,
+#main_man_watch section ul li:nth-child(5) img
+{width: 250px; height: 250px;} 
+#main_man_watch section ul li:first-child a p {position: absolute; bottom: 80px; left: 50%; transform: translate(-50%, 0); color: #fff; font-size: 25px; font-weight: 300; font-family: 'heebo';}
+#main_man_watch section ul li:first-child a .dw-btn {position: absolute; bottom: 20px; left: 50%; transform: translate(-50%, 0);  font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; text-align: center; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+#main_man_watch section ul li + li em {display: block; font-size: 16px; font-weight: 500; margin-top: 20px; margin-bottom: 5px; text-align: center;}
+#main_man_watch section ul li + li span {display: block; font-size: 13px; margin-bottom: 10px; text-align: center;}
+#main_man_watch section ul li + li span + span {display: block; font-size: 18px; font-weight: 400;}
+
+#main_man_watch section ul li a:hover em,
+#main_man_watch section ul li a:hover span
+{color: #dc1f18;}
+
+
+/* main_woman_watch */
+#main_woman_watch {margin-top: 40px;}
+#main_woman_watch section ul {display: grid; justify-items: center;}
+#main_woman_watch section ul li:first-child {grid-column: 1 / 3;}
+#main_woman_watch section ul li:first-child a {position: relative; display: block; height: 100%;}
+#main_woman_watch section ul li:nth-child(2) img,
+#main_woman_watch section ul li:nth-child(3) img,
+#main_woman_watch section ul li:nth-child(4) img,
+#main_woman_watch section ul li:nth-child(5) img
+{width: 250px; height: 250px;} 
+#main_woman_watch section ul li:first-child a p {position: absolute; bottom: 80px; left: 50%; transform: translate(-50%, 0); color: #000; font-size: 25px; font-weight: 300; font-family: 'heebo';}
+#main_woman_watch section ul li:first-child a .dw-btn {position: absolute; bottom: 20px; left: 50%; transform: translate(-50%, 0);  font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; text-align: center; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+#main_woman_watch section ul li + li em {display: block; font-size: 16px; font-weight: 500; margin-top: 20px; margin-bottom: 5px; text-align: center;}
+#main_woman_watch section ul li + li span {display: block; font-size: 13px; margin-bottom: 10px; text-align: center;}
+#main_woman_watch section ul li + li span + span {display: block; font-size: 18px; font-weight: 400;}
+#main_woman_watch section ul li a:hover em,
+#main_woman_watch section ul li a:hover span
+{color: #dc1f18;}
+
+
+/* main-category */
+#main-category {margin: 0 20px; overflow: auto; width: 100%;}
+#main-category h3 {text-align: center; font-size: 25px; font-weight: 100; margin-bottom: 40px;}
+#main-category ul {width: 1466px;}
+#main-category ul li {width: 236px; float: left;}
+#main-category ul li + li {margin-left: 10px;}
+#main-category ul li a em {display: block; text-align: center; margin-bottom: 20px; font-size: 16px;}
+#main-category ul li a:hover em {color: #dc1f18;}
+
+
+/* main-content */
+#main-content {margin: 0 20px;}
+#main div.container > ul > li {display: flex; flex-direction: column-reverse; padding-top: 20px;} 
+#main div.container > ul > li > img {width: 100vw; height: auto;}
+#main div.container > ul > li > div.text-box > em {display: block; color: #000; font-family: 'Heebo'; font-size: 24px; font-weight: 400; text-transform: uppercase; margin: 40px 0 20px 0;}
+#main div.container > ul > li > div.text-box > p {color: #252525; font-family: 'Heebo'; font-size: 18px; font-weight: 300px; font-weight: 300; line-height: 30px; margin-bottom: 10px;}
+#main div.container > ul > li > div.text-box > .dw-btn {display: inline-block; font-size: 12px; min-width: 9em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; text-align: center; line-height: calc(3.4em - 2px); margin-top: 20px; appearance: none; border: none; cursor: pointer; margin-bottom: 30px;}
+
+
+/* new product */
+#new-product {margin: 0 20px; position: relative;}
+#new-product h3 {text-align: center; font-size: 33px; font-weight: 100; margin-bottom: 40px;}
+#new-product div.new-product-container {overflow: hidden; margin-bottom: 50px;}
+#new-product .new-product-container div.box {position: relative; overflow: hidden;}
+#new-product .new-product-container ul.slide {position: relative; overflow: hidden; width: 5000px;}
+#new-product .new-product-container ul.slide li {float: left; padding-right: 5px; box-sizing: border-box;}
+#new-product .new-product-container ul.slide li a div.img-bg {background-color: #f6f6f6; width: 321px; height: 321px; position: relative;}
+#new-product .new-product-container ul.slide li a div.img-bg img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#new-product .new-product-container ul.slide li a em {display: block; font-size: 18px; font-weight: 700; margin-top: 20px; margin-bottom: 5px; text-align: center;}
+#new-product .new-product-container ul.slide li a span {display: block; font-size: 13px; margin-bottom: 10px; text-align: center;}
+#new-product .new-product-container ul.slide li a span + span {display: block; font-size: 15px; font-weight: 400;}
+#new-product .new-product-container ul.slide li a:hover {color: #dc1f18;}
+
+#new-product p.control a i span {text-indent: -999px;}
+#new-product p.control a i {color: #fff; top: 25%; left: 35%;}
+#new-product p.control a.prev{display: block; background-color: #dc1f18; border-radius: 50%; height: 36px; top: 40%; transform: translate(0, -40%); width: 36px; position: absolute; left: 0;}
+#new-product p.control a.next{display: block; background-color: #dc1f18; border-radius: 50%; height: 36px; top: 40%; transform: translate(0, -40%); width: 36px; position: absolute; right: 0;} 
+
+#new-product .dw-btn {display: block; position: relative; margin: 0 auto;  text-align: center; font-size: 12px; min-width: 9em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; text-align: center; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+
+/* main-news */
+#main-news {margin: 0 20px;}
+#main-news h3 {text-align: center; font-size: 25px; font-weight: 100; margin-bottom: 40px;}
+#main-news ul li {margin-bottom: 30px;}
+#main-news ul li a em {display: block; font-size: 16px; font-weight: 500; margin-top: 30px;}
+#main-news ul li a img {width: 100vw;}
+#main-news ul li a span {color: #252525; font-size: 16px; font-weight: 300; padding-top: 10px; display: block;}
+#main-news ul li p {color: #252525; font-size: 18px; font-weight: 300; margin-top: 20px; line-height: 1.7em; max-height: 4.9em; -webkit-line-clamp: 3; -webkit-box-orient: vertical; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; white-space: pre-wrap;}
+#main-news ul li a:hover em {color: #dc1f18;}
+#main-news .dw-btn {display: block; position: relative; margin: 0 auto; margin-top: 50px; text-align: center; font-size: 12px; min-width: 12em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; text-align: center; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+/* prefooter */
+#prefooter {width: 100%;}
+#prefooter ul li {position: relative;}
+#prefooter ul li.prefooter-left div.prefooter-text-box em {position: absolute; top: 40%; left: 50%; transform: translate(-50%, -40%); font-size: 24px; font-weight: 300; letter-spacing: 1px;}
+#prefooter ul li.prefooter-left div.prefooter-text-box .dw-btn {position: absolute; top: 70%; left: 50%; transform: translate(-50%, -70%); font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+#prefooter ul li.prefooter-right div.prefooter-text-box em {position: absolute; top: 40%; left: 50%; transform: translate(-50%, -40%); font-size: 24px; font-weight: 300; color: #fff; letter-spacing: 1px;}
+#prefooter ul li.prefooter-right div.prefooter-text-box .dw-btn {position: absolute; top: 70%; left: 50%; transform: translate(-50%, -70%); font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+/* footer */
+#footer div.newsletter-banner {width: 100%; height: 250px; background-color: #4f4f4f; display: block; padding: 40px 15px; text-align: center;}
+#footer div.newsletter-banner h2 {font-size: 25px; font-weight: 300; color: #fff; margin-bottom: 20px;}
+#footer div.newsletter-banner div.banner-content p {color: #fff; font-size: 16px; font-weight: 300;}
+#footer div.newsletter-banner div.banner-content .email-box form {position: relative;
+max-width: 600px; height: 60px; margin: 0 auto; text-align: center; margin-top: 20px;}
+#footer div.newsletter-banner div.banner-content .email-box label {position: absolute; left: 24%; top: 50%; transform: translate(0, -50%); font-size: 15px; font-weight: 300; color: #252525;}
+#footer div.newsletter-banner div.banner-content .email-box input {width: 288px; height: 50px; padding: 10px 20px; font-size: 16px; border: 1px solid rgba(0,0,0,.2); background: #fff; box-sizing: border-box; margin-top: 30px; padding: 0 10px 0 10px; left: 20px; top: 52%; transform: translate(-20px, -50%);}
+#footer div.newsletter-banner div.banner-content .email-box button {width: 72px; height: 50px; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); border: none; font-size: 15px; color: #fff; padding: 0 10px 0 10px; position: absolute; right: 40px; top: 50%; transform: translate(0, -50%); cursor: pointer;}
+
+#footer div.footer-bottom {width: 100%; background-color: #000;}
+#footer div.footer-bottom h1 {text-align: center; padding: 30px 0;}
+#footer div.footer-bottom h1 a img {margin-bottom: 40px;}
+#footer div.footer-bottom div.footer-bottom-container {text-align: center;}
+#footer div.footer-bottom div.footer-bottom-container div.footer-bottom-col {width: 50%; float: left;}
+#footer div.footer-bottom div.footer-bottom-container::after {display: block; content: ''; clear: both;}
+#footer div.footer-bottom div.footer-bottom-container div.footer-bottom-col h3 {font-weight: 700; font-size: 16px; padding: 30px 0 30px 0; color: #fff;}
+#footer div.footer-bottom div.footer-bottom-container div.footer-bottom-col li {font-size: 11px; color: #fff; padding-top: 20px;}
+#footer div.footer-bottom div.footer-bottom-text {text-align: center; color: #eae8e7; font-size: 10px; margin-top: 80px; line-height: 17px; padding: 0 20px;}
+
+
+#main_woman_watch ~ section {margin-top: 100px;}
+
+
+@media screen and (min-width: 700px) {
+
+#main-news {max-width: 800px; margin: 0 auto; position: relative;}
+#main-news h3 {text-align: center; font-size: 33px; font-weight: 100; margin-bottom: 40px;}
+#main-news > ul::after {content: ''; display: block; clear: both;}
+#main-news > ul > li {float: left; width: calc(25% - 3.75px);}
+#main-news > ul > li > a > em {display: block; font-size: 16px; font-weight: 700; margin-top: 30px;}
+#main-news > ul > li > a > span {color: #252525; font-size: 16px; font-weight: 300;}
+#main-news > ul > li + li {margin-left: 5px;}
+#main-news > ul > li > p {color: #252525; font-size: 18px; font-weight: 300; margin-top: 20px; line-height: 1.2em; max-height: 3.6em; -webkit-line-clamp: 3; -webkit-box-orient: vertical; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; white-space: pre-wrap;}
+#main-news > ul > li > a:hover em {color: #dc1f18;}
+#main-news > .dw-btn {display: block; position: relative; margin: 0 auto; margin-top: 50px; text-align: center; font-size: 12px; min-width: 12em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; text-align: center; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+#prefooter > ul {display: flex;}
+#prefooter > ul > li.prefooter-left {position: relative;}
+#prefooter > ul > li.prefooter-left > div.prefooter-text-box {display: block; overflow: hidden;}
+#prefooter > ul > li.prefooter-left > div.prefooter-text-box > em {position: absolute; top: 30%; left: 50%; transform: translate(-50%, -30%); font-size: 25px; font-weight: 300; letter-spacing: 1px; }
+#prefooter > ul > li.prefooter-left > div.prefooter-text-box > .dw-btn {position: absolute; top: 60%; left: 50%; transform: translate(-50%, -60%); font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+#prefooter {margin-top: 50px;}
+#prefooter > ul > li.prefooter-right {position: relative;}
+#prefooter > ul > li.prefooter-right > div.prefooter-text-box {display: block; overflow: hidden;}
+#prefooter > ul > li.prefooter-right > div.prefooter-text-box > em {position: absolute; top: 30%; left: 50%; transform: translate(-50%, -30%); font-size: 25px; font-weight: 300; color: #fff; letter-spacing: 1px;}
+#prefooter > ul > li.prefooter-right > div.prefooter-text-box > .dw-btn {position: absolute; top: 60%; left: 50%; transform: translate(-50%, -60%); font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+
+#footer {width: 100%;}
+#footer > div.newsletter-banner {width: 100%; height: 250px; background-color: #4f4f4f; display: block; padding: 40px 15px; text-align: center;}
+#footer > div.newsletter-banner > h2 {font-size: 25px; font-weight: 300; color: #fff; margin-bottom: 20px;}
+#footer > div.newsletter-banner > div.banner-content {margin-left: auto;
+margin-right: auto; max-width: 750px;}
+#footer > div.newsletter-banner > div.banner-content > p {color: #fff; margin-bottom: 30px; font-weight: 500;}
+#footer > div.newsletter-banner > div.banner-content > .email-box form {position: relative;
+max-width: 600px; height: 60px; margin: 0 auto; text-align: center;}
+#footer > div.newsletter-banner > div.banner-content > .email-box label {position: absolute; left: 50px; top: 52%; transform: translate(0, -50%); font-size: 15px; font-weight: 300; color: #252525;}
+#footer > div.newsletter-banner > div.banner-content > .email-box input {width: 500px; height: 56px; padding: 10px 20px; font-size: 16px; border: 1px solid rgba(0,0,0,.2); background: #fff; box-sizing: border-box; margin-top: 30px; padding: 0 10px 0 50px; left: 20px; top: 52%; transform: translate(-20px, -50%);}
+#footer > div.newsletter-banner > div.banner-content > .email-box button {width: 120px; height: 56px; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); border: none; font-size: 15px; color: #fff; padding: 0 10px 0 10px; position: absolute; right: 50px; top: 50%; transform: translate(0, -50%);}
+}
+
+
+
+
+/* --------------------------  */
+/* sub-1 (service)             */
+/* --------------------------  */
+.service-header-bar {width: 100%; height: 50px; background-color: #dc1f18; color: #fff; text-align: center; line-height: 50px; font-size: 14px; position: fixed; top: 0;}
+#header.service-header {color: #000; border-bottom: 1px solid #d5d5d5; height: 130px; background-color: #fff; position: fixed;}
+
+.main-service {margin: 0 20px;}
+#bread-crumb {margin-top: 20px;}
+#bread-crumb li {display: inline-block; margin-top: 180px; font-size: 13px;} 
+#bread-crumb li a.on {font-weight: 700;}
+#bread-crumb li + li::before {content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 700; margin: 0 10px; color: #dc1f18;}
+#main-service-title {margin: 40px 0 30px 0; text-align: center;}
+#main-service-title h3 {font-size: 24px; padding-bottom: 20px;}
+#main-service-title em {font-size: 25px; font-weight: 300; padding-bottom: 20px; display: inline-block;}
+#main-service-title p {font-size: 16px; font-weight: 500; letter-spacing: 2px;}
+#main div.container ul li div.text-box .dw-btn {margin-top: 0;}
+#main-service-contents-top div.text-box p em {color: #E32119;}
+
+#main-service-contents-middle div.container {width: 100%; padding: 15px;}
+#main-service-contents-middle div.container ul li div em {display: block; border-bottom: 1px solid #dc1f18; color: #252525; font-weight: 300; margin-top: 20px; font-size: 18px;}
+#main-service-contents-middle div.container ul li div p {color: #252525; font-weight: 300; margin-top: 20px; font-size: 16px; margin: 20px 0 20px 0;}
+#main-service-contents-middle div.container ul li div a {display: inline-block; color: #dc1f18; font-size: 12px; margin-top: 20px; font-weight: 300;}
+#main-service-contents-middle div.container ul li div a i {font-family: 'Font Awesome 6 Free'; font-size: 12px; padding-right: 10px;}
+
+.service-table {position: relative; border-collapse: collapse; width: 100%; height: 780px; margin-top: 40px; background-color: #f6f6f6; }
+#customers td, #customers th {padding: 14px; text-align: right; font-weight: 400;}
+#customers tr td:first-child {text-align: left; color: #757575; font-weight: 500; font-size: 14px;}
+#customers tr:last-child td {font-weight: 700; font-size: 12px;}
+#customers tr td .fa-xmark {color: #dc1f18;}
+.service-table .dw-btn {position: absolute; left: 50%; bottom: 0; transform: translate(-50%, 0); font-size: 10px; min-width: 14em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; margin: 0 auto; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer; margin-bottom: 10px;}
+.service-table > p {font-size: 11px; color: #252525; font-weight: 300px; line-height: 18px; padding: 30px 20px 0 20px;}
+
+@media screen and (min-width: 700px) {
+  #main-service-contents-middle div.container ul li div img {width: 100vw !important;}
+}
+
+
+/* --------------------------  */
+/* sub-2 (strap)             */
+/* --------------------------  */
+.strap-header-bar {width: 100%; height: 50px; background-color: #dc1f18; color: #fff; text-align: center; line-height: 50px; font-size: 14px; position: fixed; top: 0;}
+#header.strap-header {color: #000; border-bottom: 1px solid #d5d5d5; height: 180px;background-color: #fff; position: fixed;}
+#header.on .strap-bar {display: none;}
+.strap-bar {width: 100%; margin: 0 auto;} 
+.strap-bar h1 {display: inline-block; margin-right: auto; font-size: 18px; font-weight: 500; line-height: 21px; line-height: 2em;  position: absolute; bottom: 10px; left: 30px;}
+.strap-bar .dw-btn {font-size: 13px; min-width: 13em; height: 3em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer; position: absolute; bottom: 10px; right: 30px;}
+
+
+#main.main-strap {margin-top: 230px;}
+#strap-hero {width: 100%; height: 600px; background: url(../img/main_strap.webp)center center no-repeat; background-size: cover; position: relative;}
+#strap-hero div.strap-forms-container {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 400px; height: 450px; display: flex; background: rgba(0,0,0,.7); align-items: start; justify-content: center; overflow: hidden;}
+#strap-hero div.strap-forms-container div.strap-forms-text {text-align: center; color: #fff; padding: 40px;}
+#strap-hero div.strap-forms-container div.strap-forms-text div > * {display: block;}
+#strap-hero div.strap-forms-container div.strap-forms-text h3 {font-size: 22px; margin-bottom: 30px; font-weight: 400;}
+#strap-hero div.strap-forms-container div.strap-forms-text div {width: 100%; margin: 0 auto;} 
+#strap-hero div.strap-forms-container div.strap-forms-text div .dw-btn {font-size: 12px; width: 100%; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
+#strap-hero div.strap-forms-container div.strap-forms-text div label {text-align: left; font-size: 12px; margin-bottom: 5px;}
+#strap-hero div.strap-forms-container div.strap-forms-text div input {font-size: 12px; height: 50px; width: 100%; padding: 0 2em; border-radius: 0.1em; background: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer; margin-bottom: 10px;}
+#strap-hero div.strap-forms-container div.strap-forms-text div span {margin: 30px 0; font-size: 30px; font-weight: 300; position: relative; display: inline-block;}
+#strap-hero div.strap-forms-container div.strap-forms-text div span::before {content: ""; width: 250px;  height: 1px; position: absolute; right: calc(100% + 20px); top: 50%; transform: translate(0, -50%); background-color: rgba(255,255,255,0.3);}
+#strap-hero div.strap-forms-container div.strap-forms-text div span::after {content: ""; width: 250px;  height: 1px; position: absolute; left: calc(100% + 20px); top: 50%; transform: translate(0, -50%); background-color: rgba(255,255,255,0.3);}
+#strap-hero div.strap-forms-container div.strap-forms-text div .dw-btn-white {background-color: #000; border: 1px solid #fff; border-radius: 3px; color: #fff; width: 50%; height: 40px; font-size: 12px; margin: 20px auto; cursor: pointer;} 
+
+#strap-new {width: 100%; text-align: center; margin-top: 50px; margin-bottom: 30px;}
+#strap-new div.strap-new-text {padding: 0 30px 30px 30px;}
+#strap-new div.strap-new-text h2 {font-size: 39px; font-weight: 300; margin-bottom: 20px;}
+#strap-new div.strap-new-text p.strap__description {font-size: 15px; line-height: 1.6667; letter-spacing: .333px; margin-top: 10px;}
+#strap-new div.strap-slide {position: relative;}
+#strap-new div.strap-slide div.box p.dummy img {opacity: 0;}
+#strap-new div.strap-slide div.box ul.slide {}
+#strap-new div.strap-slide div.box ul.slide li {position: absolute; top: 0; left: 0; display: none;}
+#strap-new div.strap-slide div.box ul.slide li.on {display: block;}
+#strap-new div.strap-slide div.box ul.slide li img {position: relative;}
+#strap-new div.strap-slide div.box ul.slide li div.strap-slide-text {position: absolute; top: 67%; left: 50%; transform: translate(-50%, 0); color: #fff; text-align: center; width: 70%;}
+#strap-new div.strap-slide div.box ul.slide li div.strap-slide-text p {font-size: 30px; margin: 0 0 10px; letter-spacing: 1px; font-weight: 300;}
+#strap-new div.strap-slide div.box ul.slide li div.strap-slide-text span {font-size: 13px; line-height: 1.5; -webkit-line-clamp: 4; -webkit-box-orient: vertical; display: -webkit-box; overflow: hidden; text-overflow: ellipsis; white-space: pre-wrap;}
+
+#strap-new div.strap-slide p.control {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 1300px; max-width: 100vw;}
+#strap-new div.strap-slide p.control a {position: absolute; top: 50%; transform: translate(0, -50%); width: 20px; height: 40px; overflow: hidden; text-indent: -9999px;}
+#strap-new div.strap-slide p.control a.prev {left: 30px; background: url(../img/icon/icon-left-white.png) center center no-repeat;}
+#strap-new div.strap-slide p.control a.next {right: 30px;  background: url(../img/icon/icon-right-white.png) center center no-repeat;}
+
+
+#strap-contents div.strap-container {margin: 0 20px;}
+#prefooter {margin-top: 30px;}
