@@ -68,7 +68,7 @@ header.on div.header-top ul.header-nav-right li:first-child a i {padding-right: 
 #header div.header-top ul.header-nav-right li:hover a {color: #dc1f18;}
 
 #header .header-bottom {height: 70px;  margin: 0 auto; position: relative;  background-color: transparent;}
-#header .header-bottom > ul {position: relative; top: 50%; width: 310px; margin: 0 auto;}
+#header .header-bottom > ul {position: relative; top: 50%; width: 350px; margin: 0 auto;}
 #header .header-bottom > ul > li {float: left; margin-right: 20px;}
 #header .header-bottom > ul > li a {font-size: 14px;}
 #header .header-bottom > ul > li a:hover {color: #dc1f18;}
