@@ -232,6 +232,7 @@ max-width: 600px; height: 60px; margin: 0 auto; text-align: center;}
 /* --------------------------  */
 .service-header-bar {width: 100%; height: 50px; background-color: #dc1f18; color: #fff; text-align: center; line-height: 50px; font-size: 14px; position: fixed; top: 0; z-index: 100000;}
 #header.service-header {color: #000; border-bottom: 1px solid #d5d5d5; height: 150px; background-color: #fff; position: fixed; top: 50px; z-index: 1000000;}
+/* main-service */
 #main.main-service {padding-top: 250px; max-width: 1300px; margin: 0 auto;}
 #bread-crumb li {display: inline-block; margin-top: 30px;}
 #bread-crumb li + li::before {content: '\f054'; font-family: 'Font Awesome 6 Free'; font-weight: 700; margin: 0 10px; color: #dc1f18;}
@@ -275,6 +276,7 @@ max-width: 600px; height: 60px; margin: 0 auto; text-align: center;}
 .strap-bar h1 {display: inline-block; margin-right: auto; font-size: 21px; font-weight: 500; line-height: 21px; line-height: 2em;}
 .strap-bar .dw-btn {font-size: 12px; min-width: 15em; height: 3.4em; padding: 0 2em; border-radius: 0.1em; background: linear-gradient(90deg,#93291e 0,#e32119 51%,#e32119); color: #fff; vertical-align: middle; line-height: calc(3.4em - 2px); appearance: none; border: none; cursor: pointer;}
 
+/* strap-hero */
 #strap-hero {width: 100%; height: 600px; background: url(../img/main_strap.webp)center center no-repeat; background-size: cover; margin-top: 230px; position: relative;}
 #strap-hero div.strap-forms-container {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 600px; height: 500px; display: flex; background: rgba(0,0,0,.7); align-items: start; justify-content: center; overflow: hidden;}
 #strap-hero div.strap-forms-container div.strap-forms-text {text-align: center; color: #fff; padding: 40px;}
@@ -290,7 +292,7 @@ max-width: 600px; height: 60px; margin: 0 auto; text-align: center;}
 #strap-hero div.strap-forms-container div.strap-forms-text div .dw-btn-white {background-color: #000; border: 1px solid #fff; color: #fff; border-radius: 3px; width: 40%; height: 40px; font-size: 12px; margin: 20px auto; cursor: pointer; transition: all 0.4;} 
 #strap-hero div.strap-forms-container div.strap-forms-text div .dw-btn-white:hover {background-color: #fff; color: #000;}
 
-
+/* strap-new */
 #strap-new {text-align: center; max-width: 1300px; margin: 0 auto; margin-top: 70px;}
 #strap-new div.strap-new-text h2 {font-size: 55px; font-weight: 300; margin-bottom: 20px;}
 #strap-new div.strap-new-text p.strap__description {font-size: 18px; line-height: 1.6667; letter-spacing: .333px; margin-top: 10px;}
